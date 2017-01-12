@@ -113,8 +113,7 @@ function formatArgs(args) {
     args[0] = prefix + args[0].split('\n').join('\n' + prefix);
     args.push('\u001b[3' + c + 'm+' + exports.humanize(this.diff) + '\u001b[0m');
   } else {
-    args[0] = new Date().toUTCString()
-      + ' ' + name + ' ' + args[0];
+    args[0] = '' + name + ' ' + args[0];
   }
 }
 
